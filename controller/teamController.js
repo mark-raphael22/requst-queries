@@ -37,7 +37,7 @@ const getAllTeams= async (req,res)=>{
             '>=': '$gte',
             '=': '$eq',
             '<': '$lt',
-            '<=': '$lte'
+            '<=': '$lte' 
         };
         const regEx = /\b(<|>|>=|<=|=)\b/g;
         let filters = numberFilters.replace(regEx, (match) => `-${operatorMap[match]}-`)
